@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wl.tabguidance.activity.home.HeaderViewPager
+        android:id="@+id/scrollableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:hvp_topOffset="50dp">
+
+        <RelativeLayout
+            android:id="@+id/img_header"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@drawable/bg_monkey_king">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点我添加 tab 、 fragment"
+                android:textColor="#e42525"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:tabTextColor="#c9c9c3"
+            app:tabSelectedTextColor="#ffaa00"
+            app:tabIndicatorColor="#ffaa00"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.wl.tabguidance.activity.home.HeaderViewPager>
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/include_titlebar"
+        />
+</RelativeLayout>

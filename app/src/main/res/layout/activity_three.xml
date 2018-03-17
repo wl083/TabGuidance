@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_three"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:background="@color/white"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        >
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Fragment 和 RadioGroup 组合"
+            android:textSize="20sp"
+            />
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/card_three"
+        android:layout_width="match_parent"
+        android:background="@color/orange"
+        android:layout_height="10dp"></View>
+
+<FrameLayout
+    android:id="@+id/framelayout_three"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></FrameLayout>
+    <RadioGroup
+        android:id="@+id/rg_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="5dp"
+        android:background="#dd00ff2f"
+        >
+        <!--android:checked="true" 默认设为选择状态，同时还要设置id，否则radiobutton最终都被设为选中状态，即字体为**种颜色-->
+        <RadioButton
+            android:id="@+id/rb0"
+            android:tag="0"
+            style="@style/rb_three"
+            android:checked="true"
+            android:text="你好"
+            />
+        <RadioButton
+            android:id="@+id/rb1"
+            android:tag="1"
+            style="@style/rb_three"
+            android:text="我好"
+            />
+    </RadioGroup>
+</RelativeLayout>

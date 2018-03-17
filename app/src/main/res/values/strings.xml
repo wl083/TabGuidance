@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TabGuidance</string>
+    <string name="str_tv_homepage_desc">带公共 header 的 viewpager :</string>
+</resources>

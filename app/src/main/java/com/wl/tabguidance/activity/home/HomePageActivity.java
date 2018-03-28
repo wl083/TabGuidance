@@ -30,7 +30,8 @@ public class HomePageActivity extends BaseActivity implements View.OnClickListen
                 startActivity(TabLayoutHomePageActivity.class);
                 break;
             case R.id.btn_home_page_tabtitlestring:
-                startActivity(TabLayoutHomePageActivity.class);
+//                startActivity(TabLayoutHomePageActivity.class);
+                startActivity(CustomTabHomePageActivity.class);
                 break;
         }
     }

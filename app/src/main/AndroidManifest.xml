@@ -36,6 +36,19 @@
             android:theme="@style/HomeAppTheme"/>
         <activity android:name=".activity.home.TabLayoutHomePageActivity"
             android:theme="@style/HomeAppTheme"/>
+
+        <activity android:name=".activity.home.CustomTabHomePageActivity"
+            android:theme="@style/HomeAppTheme"/>
+
+
+
+        <!-- 友盟统计相关meta-data -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5ab892598f4a9d665d00010d" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
     </application>
 
 </manifest>

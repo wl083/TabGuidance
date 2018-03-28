@@ -27,18 +27,22 @@
                 android:textAllCaps="false"
                 android:layout_centerInParent="true"
                 />
-
         </RelativeLayout>
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tablayout_two"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <com.wl.tabguidance.utils.TabLayoutTitleStrip
+            android:id="@+id/tabs"
             android:background="#fff"
-            app:tabTextColor="#c9c9c3"
-            app:tabSelectedTextColor="#ffaa00"
-            app:tabIndicatorColor="#ffaa00"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            app:nts_color="#ffaa00"
+            app:nts_factor="2.8"
+            app:nts_inactive_color="#58cf3d"
+            app:nts_active_color="#436be2"
+            app:nts_size="15sp"
+            app:nts_weight="3dp"
+
+        />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager"

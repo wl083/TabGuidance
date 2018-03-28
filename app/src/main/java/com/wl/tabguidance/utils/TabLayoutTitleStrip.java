@@ -52,6 +52,8 @@ import java.util.Random;
 
 /**
  * Created by GIGAMOLE on 24.03.2016.
+ * Note:
+ *  局限性：当 tabTitle 的个数太多时，只能在可视view内挤在一行
  */
 @SuppressWarnings("unused")
 public class TabLayoutTitleStrip extends View implements ViewPager.OnPageChangeListener {

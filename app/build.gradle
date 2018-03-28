@@ -10,11 +10,53 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]//添加一个默认渠道号
     }
+
+//添加签名文件配置
+    signingConfigs {
+        debug {
+            storeFile file("signkey.jks")
+            storePassword "123456"
+            keyAlias "stone"
+            keyPassword "123456"
+        }
+        release {
+            storeFile file("signkey.jks")
+            storePassword "123456"
+            keyAlias "stone"
+            keyPassword "123456"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+        imooc {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: imooc]
+        }
+
+        Tencent {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: Tencent]
+        }
+
+        Baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: Baidu]
+        }
+        Qihoo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: Qihoo]
+        }
+        Xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: Xiaomi]
+        }
+        productFlavors.all {
+            flavor -> flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
         }
     }
 }
